@@ -10,14 +10,15 @@ namespace NewAddressBook
       {
         Get["/"] = _ => {
           List<Contact> ourRolodex = Contact.GetAll();
+          foreach(var contact in currentRolodex)
           return View["index.cshtml", ourRolodex];
         };
         Get["/contact/new"] = _ => {
-          return View[""];
+          return View["/add_new_contact", ];
         };
         Get[""] = _ => {
         };
-        Post["/contact/add_friend"] = _ => {
+        Post[""] = _ => {
           return View[""]
         }
     }

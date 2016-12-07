@@ -5,10 +5,11 @@ namespace NewAddressBook.Objects
 {
   public class Contact
     {
+        private int _idc;
         private string _person;
         private string _address;
         private string _number;
-
+        
 
         private static List<Contact> _outcome = new List<Contact> {};
 

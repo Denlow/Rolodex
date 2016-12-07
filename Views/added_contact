@@ -6,8 +6,11 @@
   </head>
   <body>
     <h1>Address Book: Contact Added</h1>
-    <li></li>
-    <ul>
-    </ul>
+      <li>
+        @<h1>Model.FriendPerson</h1>@
+        @<h2>Model.FriendAddress</h2>@
+        @<h2>Model.FriendNumber</h2>@
+        <a href="/contact/new_contact"></a>
+      </li>
   </body>
 </html>
