@@ -4,13 +4,18 @@
     <meta charset="utf-8">
     <title>Contact Page</title>
   </head>
-  <body>
-    <ol><a href="/"></a>Return</ol>
-    @<h1>Model.FriendPerson</h1>@
-    @<h2>Model.FriendAddress</h2>@
-    @<h2>Model.FriendNumber</h2>@
-    <ol>
-      <a href="/contact/">Go Back</a>
+    <body>
+      <h1>Enter New Contact:</h1>
+        <form action="/contact/add_new_contact" method="post">
+          <label for="new-friend">Name:</label>
+          <input type="text" name="new-friend" required>
+          <label for="new-address">Address:</label>
+          <input type="text" name="new-address" required>
+          <label for="new-number">Number:</label>
+          <input type="number" name="new-number" required>
+          <button type="submit">Submit</button>
+        </form>
+      <p><a href="/">Return</a></p>
     </ol>
   </body>
 </html>
