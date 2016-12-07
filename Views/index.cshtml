@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Address Book: INDEX</title>
-  </head>
-  <body>
-    <h1>Address Book INDEX</h1>
-  </body>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/Content/css/styles.css">
+		<title>New Project</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Address Book</h1>
+			<br>
+			<p>Enter in the details of a contact below:</p>
+			<div class="row">
+				<form action="/result" method="get">
+					<div class="form-group">
+						<input class="form-control" type="text" name="user-name" value="">
+					</div>
+          <div class="form-group">
+						<input class="form-control" type="text" name="user-address" value="">
+					</div>
+          <div class="form-group">
+						<input class="form-control" type="text" name="user-phone" value="">
+					</div>
+					<button type="submit" class="btn btn-default">Name</button>
+				</form>
+			</div>
+			@if (Model != null)
+			{
+				<div class="row">
+					<p>Word: @Model.wordToCheck</p>
+					<p>Score: @Model.wordScore</p>
+				</div>
+			}
+		</div>
+	</body>
 </html>
