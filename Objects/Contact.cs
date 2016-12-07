@@ -4,64 +4,60 @@ using System.Collections.Generic;
 namespace NewAddressBook.Objects
 {
   public class Contact
+  {
+    private int _id;
+    private string _person;
+    private string _address;
+    private string _number;
+    private static List<Contact> _outcomes = new List<Contact> {};
+
+    public Contact (string newPerson, string newAddress, string newNumber)
     {
-        private int _idc;
-        private string _person;
-        private string _address;
-        private string _number;
-        
 
-        private static List<Contact> _outcome = new List<Contact> {};
+      _person = newPerson;
 
-        public Contact (string newPerson, string newAddress, string newNumber)
-      {
+      _address = newAddress;
 
-        _person = newPerson;
+      _number = newNumber;
 
-        _address = newAddress;
+      _count = _outcomes.Count;
 
-        _number = newNumber;
+      _outcomes.Add(this);
+    }
 
-        _count = _outcome.Count;
+    public static List<Contact> GetAll()
+    {
+      return _outcomes;
+    }
 
-        _outcome.Add(this);
-      }
+    public string FriendPerson()
+    {
+      return _person;
+    }
 
-      public static List<Contact> GetAll()
-      {
-        return _outcome;
-      }
+    public string FriendAddress()
+    {
+      return _address;
+    }
 
-      public string FriendPerson()
-      {
-        return _person;
-      }
+    public string FriendNumber()
+    {
+        return _number;
+    }
 
-      public string FriendAddress()
-      {
-        return _address;
-      }
+    public string CounterId()
+    {
+      return _id;
+    }
 
-      public string FriendNumber()
-      {
-          return _number;
+    public static void ClearAll()
+    {
+      _outcomes.Clear();
+    }
 
-      }
-
-      public string CounterId()
-      {
-        return _id;
-      }
-
-      public static void ClearAll()
-      {
-        _outcome.Clear();
-      }
-
-      public static Contact Find(int Idc)
-      {
-        return _outcomes[Idc - 1];
-      }
+    public static Contact Find(int Idc)
+    {
+      return _outcomes[Idc - 1];
     }
   }
 }
