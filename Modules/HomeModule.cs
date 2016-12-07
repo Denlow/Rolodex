@@ -16,9 +16,13 @@ namespace NewAddressBook
         Get["/contact/new"] = _ => {
           return View["/add_new_contact", ];
         };
-        Get[""] = _ => {
+        Get["/contact/new"] = _ => {
+          return View["/add_new_contact", ];
         };
-        Post[""] = _ => {
-          return View[""]
-        }
+        Post["/contact/delete"] = _ => {
+          return View["/delete_contacts.cshtml"]
+        };
+        Get["/contact/new"] = _ => {
+          return View["/add_new_contact", ];
+        };
     }
